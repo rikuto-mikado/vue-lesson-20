@@ -1,6 +1,14 @@
 <template>
   <ul>
-    <learning-resource></learning-resource>
+    <!-- v-for: loops over storedResources array, each item is available as "res" -->
+    <!-- : (colon) = v-bind shorthand. evaluates the value as JS and passes res properties as props -->
+    <learning-resource
+      v-for="res in storedResources"
+      :key="res.id"
+      :title="res.title"
+      :description="res.description"
+      :link="res.link"
+    ></learning-resource>
   </ul>
 </template>
 
