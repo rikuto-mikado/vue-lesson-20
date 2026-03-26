@@ -1,24 +1,15 @@
 <template>
-  <ul>
-    <!-- v-for: loops over storedResources array, each item is available as "res" -->
-    <!-- : (colon) = v-bind shorthand. evaluates the value as JS and passes res properties as props -->
-    <learning-resource
-      v-for="res in storedResources"
-      :key="res.id"
-      :title="res.title"
-      :description="res.description"
-      :link="res.link"
-    ></learning-resource>
-  </ul>
+  <!-- Pass storedResources array as a prop to StoredResources component -->
+  <stored-resources :resources="storedResources"></stored-resources>
 </template>
 
 <script>
-import LearningResource from './components/learning-resources/LearningResource.vue';
+import StoredResources from './components/learning-resources/StoredResources.vue';
 
 export default {
     components: {
-        // You can also use shorthand: LearningResource
-        LearningResource : LearningResource
+        // You can also use shorthand: StoredResources
+        StoredResources: StoredResources
     },
     data() {
         return {

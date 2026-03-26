@@ -11,7 +11,9 @@
 </template>
 
 <script>
-
+  export default {
+    props: ['resources']
+  }
 </script>
 
 <style scoped>
