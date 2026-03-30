@@ -1,15 +1,18 @@
 <template>
+  <the-header title="AboutMe"></the-header>
   <!-- Pass storedResources array as a prop to StoredResources component -->
   <stored-resources :resources="storedResources"></stored-resources>
 </template>
 
 <script>
 import StoredResources from './components/learning-resources/StoredResources.vue';
+import TheHeader from './components/layouts/TheHeader.vue';
 
 export default {
     components: {
         // You can also use shorthand: StoredResources
-        StoredResources: StoredResources
+        StoredResources: StoredResources,
+        TheHeader: TheHeader
     },
     data() {
         return {
